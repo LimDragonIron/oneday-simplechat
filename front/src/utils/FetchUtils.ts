@@ -39,7 +39,7 @@ const onError = (error: AxiosError<unknown, any>) => {
 }
 
 export const Fetch = {
-  get: (url: string, config: AxiosRequestConfig) =>
+  get: (url: string, config?: AxiosRequestConfig) =>
     instance.get(url, config).then(onSuccess).catch(onError),
   post: (url: string, body?: any, config?: AxiosRequestConfig) =>
     instance
